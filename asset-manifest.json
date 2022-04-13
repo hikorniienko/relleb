@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/relleb/static/css/main.e516f572.chunk.css",
+    "main.css": "/relleb/static/css/main.ea369a47.chunk.css",
     "main.js": "/relleb/static/js/main.c1945ad0.chunk.js",
     "main.js.map": "/relleb/static/js/main.c1945ad0.chunk.js.map",
     "runtime-main.js": "/relleb/static/js/runtime-main.1d1b778c.js",
@@ -12,15 +12,15 @@
     "static/js/3.b50d3ca4.chunk.js.map": "/relleb/static/js/3.b50d3ca4.chunk.js.map",
     "index.html": "/relleb/index.html",
     "static/css/2.d02c1876.chunk.css.map": "/relleb/static/css/2.d02c1876.chunk.css.map",
-    "static/css/main.e516f572.chunk.css.map": "/relleb/static/css/main.e516f572.chunk.css.map",
+    "static/css/main.ea369a47.chunk.css.map": "/relleb/static/css/main.ea369a47.chunk.css.map",
     "static/js/2.5fdec802.chunk.js.LICENSE.txt": "/relleb/static/js/2.5fdec802.chunk.js.LICENSE.txt",
-    "static/media/style.module.scss": "/relleb/static/media/menu_mob.85360f6a.png"
+    "static/media/style.module.scss": "/relleb/static/media/menu_mob.6a7cdd03.png"
   },
   "entrypoints": [
     "static/js/runtime-main.1d1b778c.js",
     "static/css/2.d02c1876.chunk.css",
     "static/js/2.5fdec802.chunk.js",
-    "static/css/main.e516f572.chunk.css",
+    "static/css/main.ea369a47.chunk.css",
     "static/js/main.c1945ad0.chunk.js"
   ]
 }
