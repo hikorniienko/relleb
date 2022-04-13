@@ -60,9 +60,9 @@
 
   & > svg:first-child {
     display: none;
-    width: rem(50);
-    height: rem(50);
-    padding: rem(10);
+    width: rem(30);
+    height: rem(30);
+    margin: rem(10);
     cursor: pointer;
     opacity: 1;
     transition: opacity 0.3s;
@@ -85,9 +85,9 @@
   & > svg:last-child {
     transform: rotate(90deg);
     display: block;
-    width: rem(50);
-    height: rem(50);
-    padding: rem(10);
+    width: rem(30);
+    height: rem(30);
+    margin: rem(10);
     cursor: pointer;
     opacity: 1;
     transition: opacity 0.3s;

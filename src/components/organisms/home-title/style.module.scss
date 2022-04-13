@@ -115,6 +115,14 @@
 .searchInputSvg{
   width: 100%;
   height: 100%;
+
+  & > circle {
+    fill: rgba(255, 255, 255, 0.3);
+  }
+
+  & > path {
+    fill:black;
+  }
 }
 
 .searchButton {
@@ -142,6 +150,7 @@
   @include mmin($laptop){
     flex-direction: row;
     justify-content: space-around;
+    padding: rem(50) rem(30) rem(100);
   }
 
   &:before{

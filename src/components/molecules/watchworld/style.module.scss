@@ -73,8 +73,14 @@
 
   & > h3{
     height: rem(80);
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: rem(14);
+    line-height: 140.02%;
     @include mmin($pad) {
       height: rem(80);
+      font-size: rem(20);
     }
 
     & > span {

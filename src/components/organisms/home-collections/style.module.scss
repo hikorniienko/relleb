@@ -146,6 +146,7 @@
 
     & > div {
       @include flc;
+      text-decoration: underline;
 
       & svg {
         margin-left: rem(7);
@@ -160,6 +161,7 @@
   @include mmin($pad) {
     width: calc((100% / 2) - #{rem(25)} / 2);
     border-radius: $subline;
+    font-size: rem(18);
 
     &:after {
       content: '';
