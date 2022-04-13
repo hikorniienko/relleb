@@ -63,6 +63,9 @@ const HomeKnowledges: FC = () => {
             <SwiperSlide>
               <Knowledge
                 png="img/knowledge/1.png"
+                webp="img/knowledge/1.webp"
+                avif="img/knowledge/1.avif"
+                alt="img"
               >
                 Chrono24 review: is buying on Chrono24 safe?
               </Knowledge>
@@ -70,6 +73,9 @@ const HomeKnowledges: FC = () => {
             <SwiperSlide>
               <Knowledge
                 jpg="img/knowledge/2.jpg"
+                webp="img/knowledge/2.webp"
+                avif="img/knowledge/2.avif"
+                alt="img"
               >
                 The Definitive Guide To Luxury Watch Authentication
               </Knowledge>
@@ -77,6 +83,9 @@ const HomeKnowledges: FC = () => {
             <SwiperSlide>
               <Knowledge
                 jpg="img/knowledge/3.jpg"
+                webp="img/knowledge/3.webp"
+                avif="img/knowledge/3.avif"
+                alt="img"
               >
                 How to buy a new Rolex at list price
               </Knowledge>
@@ -84,6 +93,9 @@ const HomeKnowledges: FC = () => {
             <SwiperSlide>
               <Knowledge
                 jpg="img/knowledge/2.jpg"
+                webp="img/knowledge/2.webp"
+                avif="img/knowledge/2.avif"
+                alt="img"
               >
                 The Definitive Guide To Luxury Watch Authentication
               </Knowledge>

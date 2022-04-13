@@ -28,9 +28,24 @@ const HomeCollections: FC = () => (
           </ul>
         </div>
         <div className={styled.collections}>
-          <Collection png="img/collections/1.png" />
-          <Collection png="img/collections/2.png" />
-          <Collection png="img/collections/3.png" />
+          <Collection
+            png="img/collections/1.png"
+            webp="img/collections/1.webp"
+            avif="img/collections/1.avif"
+            alt="img"
+          />
+          <Collection
+            png="img/collections/2.png"
+            webp="img/collections/2.webp"
+            avif="img/collections/2.avif"
+            alt="img"
+          />
+          <Collection
+            png="img/collections/3.png"
+            webp="img/collections/3.webp"
+            avif="img/collections/3.avif"
+            alt="img"
+          />
           <Link to="/" className={styled.collectionsMore}>
             <div>
               <div>

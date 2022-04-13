@@ -34,6 +34,8 @@ const HomeClients: FC = () => (
             <Client
               name="Frenkie de Jong"
               png="img/avatars/1.png"
+              webp="img/avatars/1.webp"
+              avif="img/avatars/1.avif"
               alt="Frenkie de Jong"
             >
               «Easy to use and do transaction platform.
@@ -45,6 +47,8 @@ const HomeClients: FC = () => (
             <Client
               name="Erick Gracia"
               png="img/avatars/2.png"
+              webp="img/avatars/2.webp"
+              avif="img/avatars/2.avif"
               alt="Erick Gracia"
             >
               «A wide variety of choices and clear sales
@@ -56,6 +60,8 @@ const HomeClients: FC = () => (
             <Client
               name="Lana Yensson"
               png="img/avatars/3.png"
+              webp="img/avatars/3.webp"
+              avif="img/avatars/3.avif"
               alt="Lana Yensson"
             >
               «Until now I ordered 3 watches, all in perfect condition and arrived on time.»
@@ -65,6 +71,8 @@ const HomeClients: FC = () => (
             <Client
               name="Erick Gracia"
               png="img/avatars/2.png"
+              webp="img/avatars/2.webp"
+              avif="img/avatars/2.avif"
               alt="Erick Gracia"
             >
               «A wide variety of choices and clear sales

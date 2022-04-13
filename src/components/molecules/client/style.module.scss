@@ -20,6 +20,8 @@
 .avatar {
   width: rem(34);
   height: rem(34);
+  border-radius: 50%;
+  overflow: hidden;
   @include mmin($laptop) {
     width: rem(44);
     height: rem(44);

@@ -58,6 +58,9 @@ const HomeWatchworlds: FC = () => {
               <SwiperSlide>
                 <Watchworld
                   png="img/watchworld/1.png"
+                  webp="img/watchworld/1.webp"
+                  avif="img/watchworld/1.avif"
+                  alt="img"
                   logoPng="img/watchworld/logo1.png"
                 >
                   Relleb Authenticates Pre-Owned Luxury Watches For Your Peace Of Mind
@@ -66,6 +69,9 @@ const HomeWatchworlds: FC = () => {
               <SwiperSlide>
                 <Watchworld
                   png="img/watchworld/2.png"
+                  webp="img/watchworld/2.webp"
+                  avif="img/watchworld/2.avif"
+                  alt="img"
                   logoPng="img/watchworld/logo2.png"
                 >
                   This is why Relleb makes buying watches from online marketplaces a lot safer
