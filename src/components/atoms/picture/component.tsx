@@ -1,5 +1,4 @@
 import React, { FC } from 'react';
-import styled from './style.module.scss';
 
 const Picture: FC<IPicture> = ({
     jpg,

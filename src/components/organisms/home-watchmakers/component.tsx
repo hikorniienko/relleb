@@ -1,4 +1,4 @@
-import React, { FC, useEffect } from 'react';
+import React, { FC } from 'react';
 import styled from './style.module.scss';
 import Ticker from 'react-ticker';
 import Watchmaker from '../../molecules/watchmaker/component';
@@ -9,7 +9,7 @@ const HomeWatchmakers: FC = () => (
       <h2 className={styled.title}>We work with certfied watchmakers</h2>
     </div>
     <Ticker>
-      {({ index }) => (
+      {() => (
         <>
           <div className={styled.watchmakers}>
             <Watchmaker png="img/watchmakers/1.png" />

@@ -4,7 +4,7 @@ import styled from './style.module.scss';
 import Picture from '../../atoms/picture/component';
 
 const Knowledge: FC<IKnowledge> = ({
-  to, count, jpg, png, webp, avif, alt, children,
+  to, jpg, png, webp, avif, alt, children,
 }) => (
   <div className={styled.knowledge}>
     <Link
@@ -37,7 +37,6 @@ const Knowledge: FC<IKnowledge> = ({
 interface IKnowledge {
     to?: string
     children: React.ReactNode
-    count?: string
     jpg?: string
     png?: string
     webp?: string
@@ -47,7 +46,6 @@ interface IKnowledge {
 
 Knowledge.defaultProps = {
     to: '/',
-    count: '',
     jpg: '',
     png: '',
     webp: '',

@@ -1,9 +1,7 @@
 import React, { FC } from 'react';
-import { Link } from 'react-router-dom';
 import styled from './style.module.scss';
 
 const Rating: FC<IRating> = ({
-  count,
   className,
 }) => (
   <div className={`${styled.rating} ${className}`}>
@@ -36,12 +34,10 @@ const Rating: FC<IRating> = ({
 );
 
 interface IRating {
-    count?: number,
     className?: string
 }
 
 Rating.defaultProps = {
-    count: 5,
     className: '',
 };
 

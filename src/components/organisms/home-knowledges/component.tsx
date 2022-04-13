@@ -13,8 +13,8 @@ const HomeKnowledges: FC = () => {
   const _spaceBetween = 25;
   const _sliderHDefault = 768 * _slidesPerView;
 
-  const [sliderH, setSliderH] = useState<any>(_sliderHDefault);
-  const [width, height] = useWindowSize();
+  const [sliderH, setSliderH] = useState(_sliderHDefault);
+  const [width] = useWindowSize();
 
   useEffect(() => {
     sliderUpdate();
