@@ -90,13 +90,13 @@
   position: relative;
   z-index: 100;
   border-bottom: 1px solid rgba(255, 255, 255, 0.4);
-  @include mmin($xl) {
-    border-bottom: 0;
-  }
+  margin: 0 0 rem(25) 0;
 
   @include mmin($xl) {
     @include dflex(center, wrap, flex-start);
     padding: 0 rem(10);
+    border-bottom: 0;
+    margin: 0;
   }
 
   & > li {
