@@ -71,7 +71,7 @@
 
 .innerBg {
   @include full-fix;
-  background-image: url('/img/menu.png');
+  background-image: url('/img/menu_mob.png');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -79,6 +79,10 @@
   -webkit-filter: $blur;
   width: 100%;
   height: 100%;
+
+  @include mmin($pad) {
+    background-image: url('/img/menu.png');
+  }
 
   @include mmin($xl) {
     display: none;

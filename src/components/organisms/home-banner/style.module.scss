@@ -2,9 +2,10 @@
 @import "../../../scss/utils/mixins";
 
 .section {
+  position: relative;
   padding: rem(50) 0;
   @include flc;
-  background-image: url('/img/banner.png');
+  background-image: url('/img/banner_mob.png');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -13,8 +14,13 @@
   }
 
   @include mmin($laptop) {
+    background-image: url('/img/banner_pad.png');
+  }
+  
+  @include mmin($laptop) {
     padding: rem(100) 0;
     min-height: rem(660);
+    background-image: url('/img/banner.png');
   }
 }
 

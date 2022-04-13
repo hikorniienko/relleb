@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import styled from './style.module.scss';
 import Button from '../../atoms/buttons/component';
+import Picture from '../../atoms/picture/component';
 
 const HomeBanner: FC = () => (
   <section className={styled.section}>

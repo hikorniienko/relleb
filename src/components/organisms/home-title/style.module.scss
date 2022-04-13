@@ -23,10 +23,14 @@
     @include full-abs;
     width: 100%;
     height: 100%;
-    background-image: url('/img/menu.png');
+    background-image: url('/img/menu_mob.png');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
+
+    @include mmin($pad) {
+      background-image: url('/img/menu.png');
+    }
   }
 
   &::after{
