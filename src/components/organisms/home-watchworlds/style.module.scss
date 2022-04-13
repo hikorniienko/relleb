@@ -63,7 +63,7 @@
     width: rem(30);
     height: rem(30);
     margin: rem(10);
-    cursor: pointer;
+    cursor: auto;
     opacity: 1;
     transition: opacity 0.3s;
     @include mmin($pad) {
@@ -77,6 +77,10 @@
       fill: black;
     }
 
+    @include mmin($xl) {
+      cursor: pointer;
+    }
+
     &:hover{
       opacity: 0.5;
     }
@@ -88,7 +92,7 @@
     width: rem(30);
     height: rem(30);
     margin: rem(10);
-    cursor: pointer;
+    cursor: auto;
     opacity: 1;
     transition: opacity 0.3s;
     @include mmin($pad) {
@@ -99,6 +103,10 @@
     }
     & > path {
       fill: black;
+    }
+
+    @include mmin($xl) {
+      cursor: pointer;
     }
 
     &:hover{

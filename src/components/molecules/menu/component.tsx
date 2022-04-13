@@ -81,7 +81,7 @@ const Menu: FC = () => {
       setActive(Number(event.target.dataset.menuIndex));
     }
 
-    if (event.target.dataset.menuSub) {
+    if (event.target.dataset.menuSub && Number(event.target.dataset.menuSub) < 0) {
       setSub(Number(event.target.dataset.menuIndex));
     } else {
       setSub(-1);
@@ -101,7 +101,7 @@ const Menu: FC = () => {
             key={index.toString()}
             className={`${active === index ? styled.menuUlActive : undefined} ${sub === index ? styled.menuUlSub : undefined}`}
           >
-            <Link data-menu-index={index} data-menu-sub to={item.to}>
+            <Link data-menu-index={index} data-menu-sub={sub} to={item.to}>
               <span>{item.name}</span>
               <svg width="11" height="8" viewBox="0 0 11 8" xmlns="http://www.w3.org/2000/svg">
                 <path d="M9.58338 0L5.46924 4.28764L1.35509 0L0 1.41223L5.46924 7.11211L10.9385 1.41223L9.58338 0Z" />

@@ -9,13 +9,13 @@
   box-shadow: 0 rem(4) rem(40) rgba(255, 255, 255, 0.15);
   border-radius: rem(27);
   padding: rem(10) rem(15);
-
+  outline: 0;
+  cursor: auto;
   font-family: $font-family-f1;
   font-size: rem(14);
   line-height: 150%;
 
   color: white;
-  cursor: pointer;
   opacity: 1;
   transition: opacity 0.3s;
 
@@ -26,5 +26,6 @@
   @include mmin($xl) {
     font-size: rem(20);
     padding: rem(12) rem(33);
+    cursor: pointer;
   }
 }

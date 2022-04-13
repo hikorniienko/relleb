@@ -70,6 +70,13 @@
       width: 100%;
       background: white;
       color: #838485;
+      border: 1px solid white;
+      outline: none;
+      transition: border 0.3s ease;
+      &:focus {
+        border: 1px solid #3760EF;
+      }
+      
       &::placeholder{
         color: #838485;
       }

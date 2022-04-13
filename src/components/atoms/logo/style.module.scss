@@ -4,11 +4,14 @@
 .logo {
   text-decoration: none;
   display: block;
-  cursor: pointer;
   width: 84px;
 
   @include mmin($laptop) {
     width: 100px;
+  }
+
+  @include mmin($xl) {
+    cursor: pointer;
   }
 
   & > img {

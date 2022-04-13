@@ -21,12 +21,15 @@
     background: transparent;
     border: 0;
     color: inherit;
-    cursor: pointer;
     font-family: $font-family-f1;
     font-weight: 500;
     font-size: rem(16);
     line-height: 150%;
     padding-right: rem(20);
+
+    @include mmin($xl) {
+      cursor: pointer;
+    }
 
     & > option {
       color: inherit;

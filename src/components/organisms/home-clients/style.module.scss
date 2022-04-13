@@ -47,7 +47,7 @@
     height: rem(30);
     margin: rem(10);
     margin-left: rem(-60);
-    cursor: pointer;
+    cursor: auto;
     opacity: 1;
     transition: opacity 0.3s;
     & > circle {
@@ -55,6 +55,10 @@
     }
     & > path {
       fill: #3760EF;
+    }
+
+    @include mmin($xl) {
+      cursor: pointer;
     }
 
     &:hover{
@@ -70,7 +74,7 @@
     height: rem(30);
     margin: rem(10);
     margin-right: rem(-60);
-    cursor: pointer;
+    cursor: auto;
     opacity: 1;
     transition: opacity 0.3s;
     & > circle {
@@ -78,6 +82,10 @@
     }
     & > path {
       fill: #3760EF;
+    }
+
+    @include mmin($xl) {
+      cursor: pointer;
     }
 
     &:hover{

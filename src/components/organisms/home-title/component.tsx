@@ -8,7 +8,7 @@ const HomeTitle: FC = () => (
     <div className={`container ${styled.container}`}>
       <div className={styled.inner}>
         <div className={styled.title}>
-          <h1>Authenticate luxury watches on Chrono24 before buying</h1>
+          <h1>Authenticate luxury watches on <strong>Chrono24</strong> before buying</h1>
           <div className={styled.search}>
             <Input className={styled.searchInput} placeholder="Enter Chrono24 listing URL to get a quote">
               <svg className={styled.searchInputSvg} width="25" height="26" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -19,35 +19,37 @@ const HomeTitle: FC = () => (
             <Button className={styled.searchButton}>Get a quote</Button>
           </div>
         </div>
-        <ul className={styled.info}>
-          <li>
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="10" cy="10" r="7.5" />
-              <path d="M6.66668 10L9.16668 12.5L13.3333 7.5" />
-            </svg>
-            <span>
-              Authenticity & condition&nbsp;<a href="#">report&nbsp;</a>
-              <svg width="14" height="17" viewBox="0 0 14 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fillRule="evenodd" clipRule="evenodd" d="M6.83333 1V3.16667L6.83333 3.20294C6.83327 3.48565 6.83322 3.7604 6.86369 3.98701C6.89803 4.24248 6.98171 4.534 7.22386 4.77614C7.466 5.01829 7.75752 5.10197 8.01299 5.13631C8.23959 5.16678 8.51434 5.16673 8.79705 5.16667L8.83333 5.16667H11V8C11 9.41421 11 10.1213 10.5607 10.5607C10.1213 11 9.41421 11 8 11H6C4.58579 11 3.87868 11 3.43934 10.5607C3 10.1213 3 9.41421 3 8V4C3 2.58579 3 1.87868 3.43934 1.43934C3.87868 1 4.58579 1 6 1H6.83333ZM8.16667 1.01049V3.16667C8.16667 3.49978 8.16808 3.68255 8.18513 3.80935L8.1858 3.8142L8.19065 3.81487C8.31745 3.83192 8.50022 3.83333 8.83333 3.83333H10.9895C10.9797 3.71406 10.9607 3.62039 10.9239 3.53153C10.8478 3.34776 10.7032 3.20324 10.4142 2.91421L9.08579 1.58579C8.79676 1.29676 8.65224 1.15224 8.46847 1.07612C8.37961 1.03931 8.28594 1.0203 8.16667 1.01049Z" />
-                <path d="M6.99999 6.66669V9.33335M6.99999 9.33335L5.66666 8.00002M6.99999 9.33335L8.33332 8.00002" stroke="#0E0D10" strokeWidth="0.666667" />
+        <div className={styled.info}>
+          <ul>
+            <li>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="10" cy="10" r="7.5" />
+                <path d="M6.66668 10L9.16668 12.5L13.3333 7.5" />
               </svg>
-            </span>
-          </li>
-          <li>
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="10" cy="10" r="7.5" />
-              <path d="M6.66668 10L9.16668 12.5L13.3333 7.5" />
-            </svg>
-            <span>24/7 customer support</span>
-          </li>
-          <li>
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="10" cy="10" r="7.5" />
-              <path d="M6.66668 10L9.16668 12.5L13.3333 7.5" />
-            </svg>
-            <span>Money back guarantee</span>
-          </li>
-        </ul>
+              <span>
+                Authenticity & condition&nbsp;<a href="#">report</a>&nbsp;
+                <svg width="14" height="17" viewBox="0 0 14 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fillRule="evenodd" clipRule="evenodd" d="M6.83333 1V3.16667L6.83333 3.20294C6.83327 3.48565 6.83322 3.7604 6.86369 3.98701C6.89803 4.24248 6.98171 4.534 7.22386 4.77614C7.466 5.01829 7.75752 5.10197 8.01299 5.13631C8.23959 5.16678 8.51434 5.16673 8.79705 5.16667L8.83333 5.16667H11V8C11 9.41421 11 10.1213 10.5607 10.5607C10.1213 11 9.41421 11 8 11H6C4.58579 11 3.87868 11 3.43934 10.5607C3 10.1213 3 9.41421 3 8V4C3 2.58579 3 1.87868 3.43934 1.43934C3.87868 1 4.58579 1 6 1H6.83333ZM8.16667 1.01049V3.16667C8.16667 3.49978 8.16808 3.68255 8.18513 3.80935L8.1858 3.8142L8.19065 3.81487C8.31745 3.83192 8.50022 3.83333 8.83333 3.83333H10.9895C10.9797 3.71406 10.9607 3.62039 10.9239 3.53153C10.8478 3.34776 10.7032 3.20324 10.4142 2.91421L9.08579 1.58579C8.79676 1.29676 8.65224 1.15224 8.46847 1.07612C8.37961 1.03931 8.28594 1.0203 8.16667 1.01049Z" />
+                  <path d="M6.99999 6.66669V9.33335M6.99999 9.33335L5.66666 8.00002M6.99999 9.33335L8.33332 8.00002" stroke="#0E0D10" strokeWidth="0.666667" />
+                </svg>
+              </span>
+            </li>
+            <li>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="10" cy="10" r="7.5" />
+                <path d="M6.66668 10L9.16668 12.5L13.3333 7.5" />
+              </svg>
+              <span>24/7 customer support</span>
+            </li>
+            <li>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="10" cy="10" r="7.5" />
+                <path d="M6.66668 10L9.16668 12.5L13.3333 7.5" />
+              </svg>
+              <span>Money back guarantee</span>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>

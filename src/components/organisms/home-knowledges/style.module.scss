@@ -33,7 +33,6 @@
     width: rem(30);
     height: rem(30);
     margin: rem(10);
-    cursor: pointer;
     opacity: 1;
     transition: opacity 0.3s;
     @include mmin($pad) {
@@ -43,6 +42,7 @@
       position: absolute;
       left: 0;
       margin-left: rem(-60);
+      cursor: pointer;
     }
 
     & > circle {
@@ -63,7 +63,6 @@
     width: rem(30);
     height: rem(30);
     margin: rem(10);
-    cursor: pointer;
     opacity: 1;
     transition: opacity 0.3s;
     @include mmin($pad) {
@@ -74,6 +73,7 @@
       position: absolute;
       right: 0;
       margin-right: rem(-60);
+      cursor: pointer;
     }
 
     & > circle {
@@ -85,6 +85,10 @@
 
     &:hover{
       opacity: 0.5;
+    }
+
+    &:active{
+      background: transparent;
     }
   }
 }

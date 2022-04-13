@@ -6,7 +6,6 @@
   }
 }
 
-
 h2 {
   font-family: $font-family-f1;
   font-weight: 500;
@@ -23,7 +22,7 @@ h2 {
 a {
   text-decoration: underline;
   color: black;
-  
+
   @include link-h {
     text-decoration: none;
   }

@@ -14,7 +14,7 @@
 
   font-family: $font-family;
   font-size: rem(12);
-  line-height: rem(15);
+  line-height: 150%;
   text-overflow: ellipsis;
   white-space: pre;
 
@@ -24,15 +24,23 @@
     color: white;
     font-family: $font-family;
     font-size: rem(12);
-    line-height: rem(15);
+    line-height: 150%;
+    opacity: 1;
+    transition: opacity 0.3s ease;
     @include mmin($xl) {
       font-size: rem(20);
     }
   }
 
+  &:focus {
+    &::placeholder{
+      opacity: 0;
+    }
+  }
+
   @include mmin($xl) {
     font-size: rem(20);
-    line-height: rem(24);
+    line-height: 150%;
     padding: rem(15) rem(60) rem(15) rem(25);
   }
 }

@@ -106,6 +106,13 @@
 
   & > input {
     width: 100%;
+    border: 1px solid white;
+    outline: none;
+    transition: border 0.3s ease;
+    &:focus {
+      border: 1px solid #3760EF;
+    }
+
     @include mmin($laptop){
       height: rem(55);
     }
@@ -123,6 +130,16 @@
   & > path {
     fill:black;
   }
+
+  &:hover{
+    & > circle {
+      fill: rgba(255, 255, 255, 1);
+    }
+  }
+
+  @include mmin($xl) {
+    cursor: pointer;
+  }
 }
 
 .searchButton {
@@ -138,18 +155,9 @@
 
 .info {
   position: relative;
-  padding: rem(50) rem(30);
-  margin: 0;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  @include mmin($pad){
-    flex-direction: row;
-    justify-content: space-around;
-  }
+  padding: rem(50) rem(30);
   @include mmin($laptop){
-    flex-direction: row;
-    justify-content: space-around;
     padding: rem(50) rem(30) rem(100);
   }
 
@@ -166,53 +174,78 @@
     }
   }
 
-  & > li {
-    display: inline-flex;
-    align-items: center;
-
-    list-style-type: none;
-    color: white;
-    font-weight: 400;
-    font-size: rem(12);
-    line-height: rem(15);
-    margin-bottom: rem(20);
+  & > ul {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 260px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
     @include mmin($pad){
-      margin-bottom: 0;
+      flex-direction: row;
+      justify-content: space-around;
+      max-width: inherit;
+      margin: auto;
     }
     @include mmin($laptop){
-      font-size: rem(18);
-      line-height: rem(22);
-      color: rgba(131, 132, 133, 1);
+      flex-direction: row;
+      justify-content: space-around;
     }
 
-    &:last-child{
-      margin-bottom: 0;
-    }
-
-    & > svg {
-      margin-right: rem(12);
-      stroke: white;
-      @include mmin($laptop){
-        stroke: rgba(131, 132, 133, 1);
-      }
-    }
-
-    & > span{
+    & > li {
       display: inline-flex;
       align-items: center;
 
-      & svg {
-        fill: white;
+      list-style-type: none;
+      color: white;
+      font-weight: 400;
+      font-size: rem(12);
+      line-height: rem(15);
+      margin-bottom: rem(20);
+      @include mmin($pad){
+        margin-bottom: 0;
+      }
+      @include mmin($laptop){
+        font-size: rem(18);
+        line-height: rem(22);
+        color: rgba(131, 132, 133, 1);
+      }
+
+      &:last-child{
+        margin-bottom: 0;
+      }
+
+      & > svg {
+        margin-right: rem(12);
+        stroke: white;
         @include mmin($laptop){
-          fill: rgba(131, 132, 133, 1);
+          stroke: rgba(131, 132, 133, 1);
         }
       }
 
-      & > a{
-        color: white;
-        // text-decoration: none;
-        @include mmin($laptop){
-          color: rgba(131, 132, 133, 1);
+      & > span{
+        display: inline-flex;
+        align-items: center;
+
+        & svg {
+          fill: white;
+          transform: translateY(2px);
+          @include mmin($laptop){
+            fill: rgba(131, 132, 133, 1);
+            width: rem(20);
+            height: rem(30);
+            display: block;
+            transform: translateY(5px);
+          }
+        }
+
+        & > a{
+          color: white;
+          // text-decoration: none;
+          @include mmin($laptop){
+            color: rgba(131, 132, 133, 1);
+          }
         }
       }
     }

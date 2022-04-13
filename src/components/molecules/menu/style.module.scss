@@ -6,7 +6,6 @@
 }
 
 .burger {
-  cursor: pointer;
   position: relative;
   z-index: 102;
   padding: rem(10) rem(10) rem(10) 0;
@@ -93,7 +92,7 @@
   padding: rem(95) rem(60) 0 ;
   position: relative;
   z-index: 100;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   margin: 0 0 rem(25) 0;
 
   @include mmin($xl) {
