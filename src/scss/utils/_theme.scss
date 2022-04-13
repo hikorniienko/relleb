@@ -1,0 +1,30 @@
+.container {
+  @include container(calc(1240px + (#{$subline} * 3 * 2)));
+  padding: 0 calc(#{$subline} * 2);
+  @include mmin($laptop) {
+    padding: 0 calc(#{$subline} * 3);
+  }
+}
+
+
+h2 {
+  font-family: $font-family-f1;
+  font-weight: 500;
+  font-size: rem(24);
+  line-height: rem(36);
+  color: black;
+
+  @include mmin($laptop) {
+    font-size: rem(40);
+    line-height: rem(60);
+  }
+}
+
+a {
+  text-decoration: underline;
+  color: black;
+  
+  @include link-h {
+    text-decoration: none;
+  }
+}

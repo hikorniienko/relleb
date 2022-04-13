@@ -1,0 +1,35 @@
+@import "../../../scss/utils/variables";
+@import "../../../scss/utils/mixins";
+
+.select {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+
+  & svg {
+    display: block;
+    margin-left: rem(5);
+    position: absolute;
+    right: 0;
+    pointer-events: none;
+  }
+
+  & > select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    border: 0;
+    color: inherit;
+    cursor: pointer;
+    font-family: $font-family-f1;
+    font-weight: 500;
+    font-size: rem(16);
+    line-height: 150%;
+    padding-right: rem(20);
+
+    & > option {
+      color: inherit;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+@import "../../../scss/utils/variables";
+@import "../../../scss/utils/mixins";
+
+.header {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  background: white;
+}

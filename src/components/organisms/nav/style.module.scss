@@ -1,0 +1,32 @@
+@import "../../../scss/utils/variables";
+@import "../../../scss/utils/mixins";
+
+.nav {
+  @include dflex(center, wrap, space-between);
+  height: rem(60);
+
+  @include mmin($xl) {
+    height: rem(100);
+  }
+}
+
+.logo {
+  @include dflex(center, nowrap, center);
+  height: rem(60);
+  position: absolute;
+  width: 100%;
+  left: 0;
+
+  @include mmin($xl) {
+    height: rem(100);
+    position: relative;
+    width: auto;
+    order: -1;
+  }
+}
+
+.menu {
+  @include mmin($xl) {
+      flex-grow: 1;
+  }
+}

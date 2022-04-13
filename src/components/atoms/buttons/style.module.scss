@@ -1,0 +1,30 @@
+@import "../../../scss/utils/variables";
+@import "../../../scss/utils/mixins";
+
+.button {
+  @include reset-button;
+  @include flc;
+  background: #3760EF;
+  border: 1px solid #3760EF;
+  box-shadow: 0 rem(4) rem(40) rgba(255, 255, 255, 0.15);
+  border-radius: rem(27);
+  padding: rem(10) rem(15);
+
+  font-family: $font-family-f1;
+  font-size: rem(14);
+  line-height: 150%;
+
+  color: white;
+  cursor: pointer;
+  opacity: 1;
+  transition: opacity 0.3s;
+
+  @include link-h {
+    opacity: 0.8;
+  }
+
+  @include mmin($xl) {
+    font-size: rem(20);
+    padding: rem(12) rem(33);
+  }
+}

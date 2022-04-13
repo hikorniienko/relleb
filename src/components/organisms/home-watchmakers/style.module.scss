@@ -1,0 +1,40 @@
+@import "../../../scss/utils/variables";
+@import "../../../scss/utils/mixins";
+
+.section {
+  padding: rem(50) 0;
+  @include mmin($laptop) {
+    padding: rem(120) 0 rem(100);
+  }
+}
+
+.title {
+  text-align: center;
+  margin: 0;
+  margin-bottom: rem(30);
+  @include mmin($laptop) {
+    text-align: left;
+    position: relative;
+    &:before{
+      content: '';
+      background: rgba(55, 96, 239, 1);
+      width: rem(75);
+      height: rem(3);
+      display: block;
+      border-radius: rem(2);
+      position: absolute;
+      left: 0;
+      top: rem(-20);
+    }
+  }
+}
+
+.watchmakers{
+  display: grid;
+  grid-auto-columns: auto;
+  grid-auto-flow: column;
+  grid-template-rows: 1fr 1fr;
+  @include mmin($pad) {
+    grid-template-rows: 1fr;
+  }
+}

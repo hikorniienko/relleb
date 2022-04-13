@@ -1,0 +1,36 @@
+@import 'variables';
+@import 'normalize';
+@import 'vendors';
+@import 'mixins';
+@import 'theme';
+
+:root {
+
+}
+
+html,
+body {
+  font-family: $font-family, sans-serif;
+  line-height: 1.2;
+  -webkit-font-smoothing: antialiased;
+  user-select: none;
+  cursor: default;
+}
+
+html {
+  letter-spacing: normal;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  position: relative;
+  overflow-x: hidden;
+
+  &.hidden {
+    overflow: hidden;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}

@@ -1,0 +1,41 @@
+@import "../../../scss/utils/variables";
+@import "../../../scss/utils/mixins";
+
+.menuUser {
+  @include dflex(center, nowrap, flex-end);
+  padding: 0;
+  margin: 0;
+
+  @include mmin($xl) {
+    flex-direction: row-reverse;
+    margin-left: rem(30);
+  }
+
+  & > li {
+    list-style-type: none;
+    margin-left: rem(10);
+    padding: 0 rem(10);
+
+    & > a {
+      position: relative;
+
+      & svg {
+
+      }
+
+      & > span {
+        width: rem(12);
+        height: rem(12);
+        @include flc;
+        background: #3760EF;
+        color: white;
+        font-size: rem(8);
+        line-height: 0;
+        border-radius: 50%;
+        position: absolute;
+        right: rem(-10);
+        bottom: rem(-2);
+      }
+    }
+  }
+}

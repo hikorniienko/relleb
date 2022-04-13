@@ -1,0 +1,39 @@
+@import "../../../scss/utils/variables";
+@import "../../../scss/utils/mixins";
+
+.item {
+  width: rem(65);
+  height: rem(65);
+  margin: rem(7);
+  @include flc;
+  @include mmin($pad) {
+    width: rem(150);
+    height: rem(150);
+    margin: rem(12);
+  }
+}
+
+.itemInner {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: rem(1) solid #E8E8E8;
+  padding: rem(15);
+  @include flc;
+  @include mmin($pad) {
+    padding: rem(55) rem(38);
+  }
+}
+
+.picture{
+  width: 100%;
+  height: 100%;
+  display: block;
+
+  & > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+}

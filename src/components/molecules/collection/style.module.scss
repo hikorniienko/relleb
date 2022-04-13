@@ -1,0 +1,48 @@
+@import "../../../scss/utils/variables";
+@import "../../../scss/utils/mixins";
+
+.collection{
+
+}
+
+.pictureWrap{
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: $subline;
+  @include mmin($laptop) {
+    border-radius: calc(#{$subline} * 2);
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    padding-top: 80%;
+  }
+}
+
+.pictureInner{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.picture{
+  display: block;
+  width: 100%;
+  height: 100%;
+  filter: grayscale(100%);
+  transition: 0.3s filter linear, 0.3s -webkit-filter linear;
+  &:hover{
+    filter: grayscale(0);
+  }
+
+  & > img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

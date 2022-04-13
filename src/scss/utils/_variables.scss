@@ -1,0 +1,28 @@
+// Functions
+@function rem($pixels, $root: $fz-root) {
+  @return calc((#{$pixels} / #{$root} * 1rem));
+}
+
+// lines
+$subline: 5px;
+$subline-rem: 5;
+$baseline: $subline * 5;
+$baseline-rem: 25;
+
+// Font base
+$font-size-base: 16px;
+$fz-root: 16;
+
+$font-family: 'Inter', sans-serif;
+$font-family-f1: 'Poppins', sans-serif;
+
+// Break points
+$retina: '(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)';
+$phone: 375;
+$pad: 768;
+$laptop: 1024;
+$xl: 1379;
+$desktop: 1920;
+
+// Blur
+$blur: blur(10px);

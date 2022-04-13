@@ -1,0 +1,13 @@
+@import "../../../scss/utils/variables";
+@import "../../../scss/utils/mixins";
+
+.rating {
+  & > svg {
+    & > rect {
+      fill: red;
+    }
+    & > path {
+      fill: green;
+    }
+  }
+}

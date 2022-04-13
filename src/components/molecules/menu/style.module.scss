@@ -1,0 +1,270 @@
+@import "../../../scss/utils/variables";
+@import "../../../scss/utils/mixins";
+
+.menu {
+
+}
+
+.burger {
+  cursor: pointer;
+  position: relative;
+  z-index: 102;
+  padding: rem(10) rem(10) rem(10) 0;
+
+  @include mmin($xl) {
+    display: none;
+  }
+
+  & > svg:last-child {
+    display: none;
+  }
+}
+
+.menuActive {
+  & > svg:first-child {
+    display: none;
+  }
+
+  & > svg:last-child {
+    display: block;
+  }
+}
+
+.inner {
+  @include full-fix;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  background: black;
+  display: none;
+  overflow-y: auto;
+
+  @include mmin($xl) {
+    display: flex;
+    justify-content: flex-end;
+    background: transparent;
+    @include full-reset;
+    overflow-y: inherit;
+  }
+}
+
+.innerActive {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  flex-direction: column;
+}
+
+.innerLogo {
+  @include flc;
+  height: rem(60);
+  width: 100%;
+  position: fixed;
+  z-index: 101;
+  background: black;
+
+  @include mmin($xl) {
+    height: rem(100);
+    display: none;
+  }
+}
+
+.innerBg {
+  @include full-fix;
+  background-image: url('/img/menu.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  filter: $blur;
+  -webkit-filter: $blur;
+  width: 100%;
+  height: 100%;
+
+  @include mmin($xl) {
+    display: none;
+  }
+}
+
+.menuUl {
+  padding: rem(95) rem(60) 0 ;
+  position: relative;
+  z-index: 100;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  @include mmin($xl) {
+    border-bottom: 0;
+  }
+
+  @include mmin($xl) {
+    @include dflex(center, wrap, flex-start);
+    padding: 0 rem(10);
+  }
+
+  & > li {
+    position: relative;
+    list-style-type: none;
+    padding-bottom: rem(20);
+    @include mmin($xl) {
+      padding-bottom: 0;
+      padding: 0 rem(20);
+    }
+
+    & > a {
+      color: white;
+      text-decoration: none;
+      font-family: $font-family-f1;
+      font-weight: 500;
+      font-size: rem(16);
+      line-height: 150%;
+
+      display: inline-flex;
+      align-items: center;
+
+      border-bottom: 1px solid transparent;
+      transition: border-bottom 0.3s ease-in-out;
+
+      @include link-h {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+        @include mmin($xl) {
+          border-bottom: 1px solid black;
+        }
+      }
+
+      @include mmin($xl) {
+        color: black;
+      }
+
+      & > svg {
+        margin-left: rem(5);
+        fill:white;
+
+        @include mmin($xl) {
+          fill: black;
+        }
+      }
+
+      & * {
+        pointer-events: none;
+      }
+    }
+
+    & > ul {
+      height: 0;
+      opacity: 0;
+      overflow: hidden;
+      padding-left: rem(20);
+      transform: translate(0, -100%);
+      transition: transform 0.3s ease-in-out, height 0.6s ease-in-out, opacity 0.6s ease-in-out;
+      @include mmin($xl) {
+        position: absolute;
+        left: 0;
+        background: white;
+        padding: 0 rem(20);
+        width: 100%;
+      }
+
+      & > li {
+        list-style-type: none;
+        padding: rem(10) 0;
+
+        & > a {
+          color: white;
+          text-decoration: none;
+          font-family: $font-family-f1;
+          font-weight: 500;
+          font-size: rem(16);
+          line-height: 150%;
+
+          display: inline-flex;
+          align-items: center;
+
+          border-bottom: 1px solid transparent;
+          transition: border-bottom 0.3s ease-in-out;
+
+          @include link-h {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+            @include mmin($xl) {
+              border-bottom: 1px solid black;
+            }
+          }
+
+          @include mmin($xl) {
+            color: black;
+          }
+        }
+      }
+    }
+  }
+}
+
+.menuUlActive {
+  & > a {
+    border-bottom: 1px solid rgba(255,255,255, 0.4)!important;
+    @include mmin($xl) {
+      border-bottom: 1px solid black!important;
+    }
+  }
+}
+
+.menuUlSub {
+  & > ul {
+    display: block!important;
+    transform: translate(0, 0)!important;
+    height: auto!important;
+    opacity: 1!important;
+  }
+}
+
+.menuSocial {
+  position: relative;
+  z-index: 100;
+  padding: 0 rem(60) rem(25) rem(60);
+  margin: 0;
+  @include dflex(center, wrap, flex-start);
+  @include mmin($xl) {
+    display: none;
+  }
+}
+
+.menuSelect {
+  position: relative;
+  z-index: 100;
+  padding: 0 rem(60) rem(25) rem(60);
+  margin: 0;
+  @include mmin($xl) {
+    padding: 0;
+    margin-left: rem(30);
+    @include dflex(center, wrap, flex-start);
+  }
+
+  & > li {
+    list-style-type: none;
+    padding-bottom: rem(25);
+    @include mmin($xl) {
+      padding: 0 rem(10);
+    }
+  }
+}
+
+.menuSelectItem {
+  & svg {
+    fill: white;
+  }
+
+  & select {
+    color: white!important;
+
+    & option {
+      color: black!important;
+    }
+  }
+
+  @include mmin($xl) {
+    & svg {
+      fill: black;
+    }
+
+    & select {
+      color: black!important;
+    }
+  }
+}

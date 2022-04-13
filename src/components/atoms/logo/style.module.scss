@@ -1,0 +1,24 @@
+@import "../../../scss/utils/variables";
+@import "../../../scss/utils/mixins";
+
+.logo {
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+  width: 84px;
+
+  @include mmin($laptop) {
+    width: 100px;
+  }
+
+  & > img {
+    width: 100%;
+    display: block;
+  }
+}
+
+.logoInvert {
+  & > img {
+    filter: invert(100%);
+  }
+}

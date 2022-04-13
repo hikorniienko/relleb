@@ -1,0 +1,90 @@
+@import "../../../scss/utils/variables";
+@import "../../../scss/utils/mixins";
+
+.section {
+  padding: rem(50) 0;
+  @include mmin($laptop) {
+    padding: rem(100) 0;
+  }
+}
+
+.title {
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: rem(30);
+  max-width: 70%;
+}
+
+.slider {
+  position: relative;
+}
+
+.navigation {
+  @include flc;
+  @include mmin($xl) {
+    position: absolute;
+    width: 100%;
+    top: 33%;
+    // transform: translateY(rem(-25));
+  }
+
+  & > svg:first-child {
+    display: none;
+    width: rem(50);
+    height: rem(50);
+    padding: rem(10);
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity 0.3s;
+    @include mmin($pad) {
+      display: block;
+    }
+    @include mmin($xl) {
+      position: absolute;
+      left: 0;
+      margin-left: rem(-60);
+    }
+
+    & > circle {
+      stroke: black;
+    }
+    & > path {
+      fill: black;
+    }
+
+    &:hover{
+      opacity: 0.5;
+    }
+  }
+
+  & > svg:last-child {
+    transform: rotate(90deg);
+    display: block;
+    width: rem(50);
+    height: rem(50);
+    padding: rem(10);
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity 0.3s;
+    @include mmin($pad) {
+      transform: rotate(0deg);
+    }
+
+    @include mmin($xl) {
+      position: absolute;
+      right: 0;
+      margin-right: rem(-60);
+    }
+
+    & > circle {
+      stroke: black;
+    }
+    & > path {
+      fill: black;
+    }
+
+    &:hover{
+      opacity: 0.5;
+    }
+  }
+}

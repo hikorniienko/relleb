@@ -1,0 +1,35 @@
+@import "../../../scss/utils/variables";
+@import "../../../scss/utils/mixins";
+
+.section {
+  padding: rem(50) 0 0;
+  @include mmin($laptop) {
+    padding: rem(100) 0 0;
+  }
+}
+
+.title {
+  text-align: center;
+  margin: 0;
+  margin-bottom: rem(30);
+}
+
+.inner{
+  @include mmin($pad) {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  & > div {
+    margin-bottom: rem(25);
+    @include mmin($pad) {
+      margin-bottom: 0;
+      width: calc((100% / 3) - #{$subline} * 2);
+    }
+    @include mmin($xl) {
+      margin-bottom: 0;
+      width: calc((100% / 3) - (#{$subline} * 2 * 2));
+    }
+  }
+}

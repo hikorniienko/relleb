@@ -1,0 +1,18 @@
+@import "../../../scss/utils/variables";
+@import "../../../scss/utils/mixins";
+
+.social {
+  @include dflex(center, wrap, flex-start);
+  margin: 0;
+  padding: 0;
+  
+  & > li {
+    list-style-type: none;
+    padding-right: rem(10);
+    & > a {
+      & > svg {
+        display: block;
+      }
+    }
+  }
+}
