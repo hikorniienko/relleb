@@ -66,6 +66,7 @@ const HomeKnowledges: FC = () => {
                 webp="img/knowledge/1.webp"
                 avif="img/knowledge/1.avif"
                 alt="img"
+                logo="img/knowledge/logo.png"
               >
                 Chrono24 review: is buying on Chrono24 safe?
               </Knowledge>

@@ -38,3 +38,32 @@
     grid-template-rows: 1fr;
   }
 }
+
+.animation {
+  display: flex;
+  flex-wrap: nowrap;
+
+  &Wrap {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  & > div{
+    animation-name: animation-watchmakers;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    @include mmin($pad) {
+      animation-duration: 20s;
+    }
+  }
+}
+
+@keyframes animation-watchmakers {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
