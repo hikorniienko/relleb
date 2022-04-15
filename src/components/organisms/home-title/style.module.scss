@@ -165,18 +165,18 @@
     padding: rem(50) rem(30) rem(100);
   }
 
-  &:before{
-    content: '';
-    @include full-abs;
-    z-index: -1;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4);
-    margin-left: calc((#{$subline} * 2) * -1);
-    margin-right: calc((#{$subline} * 2) * -1);
-    @include mmin($laptop){
-      display: none;
-    }
-  }
+  // &:before{
+  //   content: '';
+  //   @include full-abs;
+  //   z-index: -1;
+  //   height: 100%;
+  //   background: rgba(0, 0, 0, 0.4);
+  //   margin-left: calc((#{$subline} * 2) * -1);
+  //   margin-right: calc((#{$subline} * 2) * -1);
+  //   @include mmin($laptop){
+  //     display: none;
+  //   }
+  // }
 
   & > ul {
     margin: 0;
