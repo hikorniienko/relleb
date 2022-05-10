@@ -58,5 +58,6 @@ module.exports = {
         'react/jsx-curly-newline': 'off',
         'function-paren-newline': 0,
         'no-shadow': 0,
+        'linebreak-style': 0,
     },
 };
