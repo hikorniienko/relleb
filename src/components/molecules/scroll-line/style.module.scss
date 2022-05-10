@@ -1,0 +1,19 @@
+@import "../../../scss/utils/variables";
+@import "../../../scss/utils/mixins";
+
+.line {
+  width: 100%;
+  height: rem(1);
+  background: #E2E7FD;
+  border-radius: rem(1);
+  position: relative;
+  overflow: hidden;
+}
+
+.width{
+  width: 100%;
+  height: rem(1);
+  background: #3760EF;
+  border-radius: 1px;
+  transform: translateX(-100%);
+}
