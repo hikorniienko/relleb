@@ -1,0 +1,60 @@
+@import '../../../scss/utils/variables';
+@import '../../../scss/utils/mixins';
+
+.modal {
+  @include full-fix;
+  @include flc;
+  z-index: 200;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  &Active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  &Bg {
+    @include reset-button;
+    @include full-abs;
+    background: rgba(255, 255, 255, 0.5);
+  }
+}
+
+.inner {
+  transform: scale(0);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s ease;
+
+  background: #f8f9ff;
+  border-radius: rem(10);
+  padding: rem(15) rem(10);
+
+  @include mmin($laptop) {
+    padding: rem(50) rem(35);
+  }
+
+  &Active {
+    transform: scale(1);
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+.content {
+  overflow-y: auto;
+}
+
+.close {
+  @include dflex(center, nowrap, flex-end);
+  & > svg {
+    width: rem(15);
+    height: rem(15);
+    display: block;
+    cursor: pointer;
+    @include mmin($laptop) {
+      width: rem(25);
+      height: rem(25);
+    }
+  }
+}
