@@ -1,0 +1,49 @@
+@import "../../../scss/utils/variables";
+@import "../../../scss/utils/mixins";
+
+.figure {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+
+  & > div {
+    background: #c4c4c4;
+    border-radius: rem(10);
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+
+    &:before {
+      content: '';
+      width: 100%;
+      padding-bottom: 100%;
+      display: block;
+      @include mmin($laptop) {
+        padding-bottom: 50%;
+      }
+    }
+  }
+
+  & picture {
+    @include full-abs;
+
+    & > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  }
+
+  & figcaption {
+    font-style: normal;
+    font-weight: 400;
+    font-size: rem(10);
+    line-height: 160.02%;
+    color: #c4c4c4;
+    margin: rem(10) 0 0 0;
+    @include mmin($laptop) {
+      font-size: rem(16);
+    }
+  }
+}

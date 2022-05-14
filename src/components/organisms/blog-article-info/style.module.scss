@@ -1,0 +1,51 @@
+@import '../../../scss/utils/variables';
+@import '../../../scss/utils/mixins';
+
+.info {
+  background: #3760ef;
+  border-radius: rem(10);
+  padding: rem(50) rem(15);
+  @include mmin($laptop) {
+    padding: rem(50);
+    @include dflex(center, nowrap, space-between);
+  }
+
+  & h2 {
+    color: white!important;
+    text-align: center;
+    font-size: rem(20);
+    @include mmin($laptop) {
+      font-size: calc((35 / 16 * 1rem));
+      text-align: left;
+      margin: 0!important;
+      max-width: rem(460);
+    }
+  }
+
+  &Btn {
+    background: white;
+    color: #000000;
+    height: rem(40);
+    width: 100%;
+    margin: rem(40) 0 rem(10);
+    font-weight: 500;
+    @include mmin($laptop) {
+      height: rem(50);
+      margin: rem(15) 0 0 0;
+      min-width: rem(200);
+    }
+  }
+}
+
+.block {
+  @include mmin($laptop) {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+
+    & > div {
+      display: block;
+    }
+  }
+}

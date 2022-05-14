@@ -1,0 +1,24 @@
+@import "../../../scss/utils/variables";
+@import "../../../scss/utils/mixins";
+
+.block {
+  width: 100%;
+  background: #F8F9FF;
+  border-radius: rem(10);
+  padding: rem(50) rem(15);
+  @include mmin($laptop) {
+    padding: rem(50) rem(30);
+  }
+}
+
+.beforeLine {
+  &::before {
+    content: "";
+    width: rem(60);
+    height: rem(2);
+    background: #3760EF;
+    border-radius: rem(14);
+    margin: 0 auto;
+    display: block;
+  }
+}

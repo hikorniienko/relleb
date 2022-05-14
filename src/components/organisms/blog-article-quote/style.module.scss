@@ -1,0 +1,56 @@
+@import '../../../scss/utils/variables';
+@import '../../../scss/utils/mixins';
+
+.quote {
+  background: #3760ef;
+  border-radius: rem(10);
+  padding: rem(50);
+  font-style: italic;
+  margin: rem(15) 0;
+  font-family: $font-family-f1;
+  font-style: italic;
+  font-weight: 400;
+  font-size: rem(14);
+  line-height: 160.02%;
+  color: #ffffff;
+  position: relative;
+  & p {
+    color: #ffffff;
+  }
+  @include mmin($laptop) {
+    font-size: rem(20);
+  }
+
+  & > svg {
+    fill: #E2E7FD;
+    &:first-of-type {
+      position: absolute;
+      left: rem(20);
+      top: rem(-15);
+      @include mmin($laptop) {
+        left: rem(46);
+      }
+    }
+    &:last-of-type {
+      position: absolute;
+      right: rem(20);
+      bottom: rem(-15);
+      @include mmin($laptop) {
+        right: rem(46);
+      }
+    }
+  }
+}
+
+.quoteLight {
+  background: #F8F9FF;
+  color: #000000;
+  position: relative;
+  & p {
+    color: #000000;
+  }
+
+  & > svg {
+    fill: #3760EF;
+  }
+}

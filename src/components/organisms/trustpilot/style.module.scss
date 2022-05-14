@@ -1,0 +1,55 @@
+@import '../../../scss/utils/variables';
+@import '../../../scss/utils/mixins';
+
+.trustpilot {
+  @include flc;
+
+  & > div:first-of-type {
+    background-image: url('/img/trustpilot.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    width: rem(72);
+    height: rem(20);
+    display: block;
+    margin-right: rem(10);
+  }
+
+  & > div:last-of-type {
+    display: flex;
+
+    & > svg {
+      display: block;
+      width: rem(12);
+      height: rem(12);
+      margin-left: rem(5);
+      &:first-child {
+        margin-left: 0;
+      }
+
+      & > rect {
+        fill: #3760ef !important;
+      }
+      & > path {
+        fill: white !important;
+      }
+    }
+  }
+}
+
+.trustpilotInvert{
+  & > div:first-of-type {
+    filter: invert(1);
+  }
+
+  & > div:last-of-type {
+    & > svg {
+      & > rect {
+        fill: white !important;
+      }
+      & > path {
+        fill: #3760EF !important;
+      }
+    }
+  }
+}

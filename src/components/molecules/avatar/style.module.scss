@@ -1,0 +1,21 @@
+@import "../../../scss/utils/variables";
+@import "../../../scss/utils/mixins";
+
+.avatar {
+  text-decoration: none;
+  display: block;
+  width: rem(80);
+  height: rem(80);
+  overflow: hidden;
+  border-radius: 50%;
+  &Picture{
+    width: 100%;
+    height: 100%;
+    & > img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+  }
+}

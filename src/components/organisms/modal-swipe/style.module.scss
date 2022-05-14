@@ -1,0 +1,121 @@
+@import '../../../scss/utils/variables';
+@import '../../../scss/utils/mixins';
+
+.modal {
+  position: fixed;
+  z-index: 60;
+  bottom: 0;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, 100%);
+  transition: 0.3s ease;
+  @include mmin($laptop) {
+    @include container(calc(1240px + (#{$subline} * 3 * 2)));
+    padding: 0 calc(#{$subline} * 3);
+  }
+}
+
+.active {
+  transform: translate(-50%, 0);
+}
+
+.inner {
+  @include reset-button;
+  width: 100%;
+  min-height: rem(70);
+  padding: rem(10) rem(10) rem(5);
+  background: #ffffff;
+  box-shadow: 0px rem(4) rem(19) rgba(49, 67, 81, 0.2);
+  border-radius: rem(10) rem(10) 0px 0px;
+  margin: 0 auto;
+  position: relative;
+  @include flc;
+}
+
+.content {
+  &Wrap {
+    width: 100%;
+    position: relative;
+  }
+  position: absolute;
+  bottom: 0;
+  z-index: 61;
+  transform: translateY(100%);
+  transition: 0.3s ease;
+
+  width: 100%;
+  background: #f8f9ff;
+  border: rem(1) solid #e2e7fd;
+  border-radius: rem(10) rem(10) 0px 0px;
+  padding: rem(30) rem(16) 0;
+
+  &::before {
+    content: '';
+    width: rem(60);
+    height: rem(2);
+    background: #3760ef;
+    border-radius: rem(14);
+    margin: 0 auto;
+    display: block;
+  }
+
+  &Close {
+    @include reset-button;
+    @include flc;
+    font-size: rem(10);
+    line-height: 140.02%;
+    color: #c4c4c4;
+    margin: 0 auto;
+    padding: rem(8) 0;
+    & > svg {
+      margin-right: rem(5);
+    }
+  }
+}
+
+.open {
+  transform: translateY(0);
+}
+
+.close {
+  @include reset-button;
+  position: absolute;
+  left: 0;
+  padding: rem(10);
+}
+
+.title {
+  font-family: $font-family-f1;
+  font-style: normal;
+  font-weight: 500;
+  font-size: rem(14);
+  line-height: rem(21);
+  color: black;
+  @include dflex(center, nowrap, space-between);
+  flex-direction: column;
+
+  &Blue {
+    color: #3760ef;
+  }
+
+  &::before {
+    content: '';
+    width: rem(9);
+    height: rem(5);
+    display: block;
+    background-image: url("data:image/svg+xml,%3Csvg width='9' height='5' viewBox='0 0 9 5' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 4L4.5 1L8 4' stroke='%233760EF'/%3E%3C/svg%3E%0A");
+    position: absolute;
+    top: rem(10);
+  }
+
+  &::after {
+    content: '';
+    width: rem(115);
+    height: rem(3);
+    background: #000000;
+    border-radius: rem(2.5);
+    display: block;
+    position: absolute;
+    bottom: rem(10);
+  }
+}

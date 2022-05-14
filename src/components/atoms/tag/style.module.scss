@@ -1,0 +1,19 @@
+@import '../../../scss/utils/variables';
+@import '../../../scss/utils/mixins';
+
+.tag {
+  background: #f8f9ff;
+  border-radius: rem(100);
+  font-family: $font-family-f1;
+  font-style: normal;
+  font-weight: 500;
+  font-size: rem(12);
+  line-height: 140.02%;
+  color: #3760ef;
+  text-align: center;
+  padding: rem(7) rem(15);
+  @include mmin($laptop) {
+    padding: rem(7) rem(30);
+    font-size: rem(18);
+  }
+}

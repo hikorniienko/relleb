@@ -1,0 +1,36 @@
+@import '../../../scss/utils/variables';
+@import '../../../scss/utils/mixins';
+
+.details {
+  & > summary {
+    display: block;
+    font-family: $font-family-f1;
+    font-style: normal;
+    font-weight: 500;
+    font-size: rem(15);
+    line-height: 160%;
+    color: #000000;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='10' cy='10' r='10' fill='%233760EF'/%3E%3Cpath d='M10.0508 6.28516V13.8141' stroke='white'/%3E%3Cpath d='M6.28711 10.0488H13.816' stroke='white'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: rem(15) rem(15);
+    padding-right: rem(30);
+    @include mmin($laptop) {
+      font-size: rem(25);
+      background-size: rem(20) rem(20);
+    }
+  }
+
+  &[open] > summary {
+    margin-bottom: rem(20);
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='10' cy='10' r='10' fill='%233760EF'/%3E%3Cpath d='M6.28418 10.0488H13.8131' stroke='white'/%3E%3C/svg%3E%0A");
+    @include mmin($laptop) {
+      margin-bottom: rem(25);
+    }
+  }
+
+  & > summary::-webkit-details-marker {
+    display: none;
+  }
+}

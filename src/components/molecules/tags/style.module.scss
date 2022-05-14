@@ -1,0 +1,16 @@
+@import "../../../scss/utils/variables";
+@import "../../../scss/utils/mixins";
+
+.tags{
+  @include dflex(center, wrap, flex-start);
+  & > div {
+    margin-right: rem(5);
+    @include mmin($laptop) {
+      margin-right: rem(10);
+    }
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}

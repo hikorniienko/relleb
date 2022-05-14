@@ -1,0 +1,133 @@
+@import '../../../scss/utils/variables';
+@import '../../../scss/utils/mixins';
+
+.share {
+  @include reset-button;
+  @include flc;
+  cursor: pointer;
+
+  &:hover {
+    & span::before {
+      opacity: 0;
+    }
+  }
+
+  & span {
+    line-height: 140%;
+    font-weight: 500;
+    position: relative;
+
+    &::before {
+      content: '';
+      width: 100%;
+      height: rem(1);
+      position: absolute;
+      bottom: 0;
+      background: #314351;
+      opacity: 1;
+      transition: 0.3s ease;
+    }
+  }
+
+  & svg {
+    width: rem(13);
+    height: rem(16);
+    margin-right: rem(10);
+  }
+}
+
+.wrap {
+  width: 100%;
+  max-width: rem(440);
+}
+
+.title {
+  font-family: $font-family-f1;
+  font-style: normal;
+  font-weight: 500;
+  font-size: rem(20);
+  line-height: rem(30);
+  text-align: center;
+  color: #000000;
+  margin-bottom: rem(25);
+
+  @include mmin($laptop) {
+    text-align: left;
+    max-width: rem(220);
+    margin-bottom: rem(30);
+  }
+}
+
+.desc {
+  @include flc;
+  font-weight: 400;
+  font-size: rem(14);
+  line-height: 140.02%;
+  color: #314351;
+  margin-bottom: rem(25);
+
+  @include mmin($laptop) {
+    justify-content: flex-start;
+    max-width: rem(270);
+    margin-bottom: rem(30);
+  }
+
+  & > picture {
+    min-width: rem(50);
+    height: rem(50);
+    display: block;
+    border-radius: rem(5);
+    overflow: hidden;
+    margin-right: rem(10);
+
+    & > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  }
+}
+
+.nav {
+  margin: 0;
+  padding: 0;
+  @include dflex(top, wrap, space-between);
+
+  & > li {
+    width: calc(100% / 2 - #{rem(2.5)});
+    margin-bottom: rem(5);
+    list-style-type: none;
+
+    & > a {
+      @include dflex(center, nowrap, flex-start);
+      background: #ffffff;
+      border: rem(1) solid #e2e7fd;
+      border-radius: rem(10);
+      text-decoration: none;
+      padding: rem(18) rem(15);
+      max-height: rem(50);
+      transition: background 0.3s ease;
+      color: #314351;
+      text-decoration: none;
+
+      & svg {
+        width: rem(20);
+        height: auto;
+        max-height: rem(20);
+        margin-right: rem(10);
+      }
+
+      & img {
+        width: rem(20);
+        height: auto;
+        margin-right: rem(10);
+      }
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.5);
+        text-decoration: none;
+      }
+    }
+  }
+}
