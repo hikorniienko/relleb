@@ -947,8 +947,8 @@ const BlogArticle: FC = () => (
             </div>
           </div>
         </footer>
-        <HomeKnowledges />
       </div>
+      <HomeKnowledges />
     </article>
   </>
 );

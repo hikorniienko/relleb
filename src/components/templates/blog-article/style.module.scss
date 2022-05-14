@@ -229,7 +229,7 @@
   width: 100%;
   border-top: 1px solid #e8e8e8;
   padding-top: rem(50);
-  margin-bottom: rem(50);
+  // margin-bottom: rem(50);
   @include mmin($laptop) {
     @include dflex(stretch, nowrap, space-between);
     flex-direction: row-reverse;
