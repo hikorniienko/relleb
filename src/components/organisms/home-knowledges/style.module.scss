@@ -2,9 +2,9 @@
 @import "../../../scss/utils/mixins";
 
 .section {
-  padding: rem(50) 0;
+  margin: rem(50) 0;
   @include mmin($laptop) {
-    padding: rem(100) 0;
+    margin: rem(100) 0;
   }
 }
 

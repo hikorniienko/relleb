@@ -12,6 +12,12 @@ const Modal: FC<IModal> = ({ state, children, setState }) => {
   const speed = 300;
 
   useEffect(() => {
+    if (state) {
+      document.body.classList.add('hidden');
+    } else {
+      document.body.classList.remove('hidden');
+    }
+
     setTimeout(() => {
       setAnimation(state);
     }, speed);

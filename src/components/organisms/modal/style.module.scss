@@ -8,6 +8,8 @@
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease;
+  padding: 10vh 10vw;
+
   &Active {
     opacity: 1;
     pointer-events: auto;
@@ -17,6 +19,7 @@
     @include reset-button;
     @include full-abs;
     background: rgba(255, 255, 255, 0.5);
+    cursor: auto;
   }
 }
 
@@ -25,10 +28,12 @@
   opacity: 0;
   pointer-events: none;
   transition: 0.3s ease;
+  overflow: hidden;
 
   background: #f8f9ff;
   border-radius: rem(10);
   padding: rem(15) rem(10);
+  max-height: 80vh;
 
   @include mmin($laptop) {
     padding: rem(50) rem(35);
@@ -43,6 +48,7 @@
 
 .content {
   overflow-y: auto;
+  max-height: 70vh;
 }
 
 .close {
@@ -55,6 +61,8 @@
     @include mmin($laptop) {
       width: rem(25);
       height: rem(25);
+      position: absolute;
+      top: rem(50);
     }
   }
 }
