@@ -205,7 +205,7 @@
       position: sticky;
       top: rem(100);
       height: auto;
-      @include mmin ($laptop) {
+      @include mmin ($xl) {
         top: rem(130);
       }
     }
