@@ -200,6 +200,12 @@
       height: rem(50);
       margin-bottom: rem(10);
     }
+
+    &Aside {
+      position: sticky;
+      top: rem(100);
+      height: auto;
+    }
   }
 }
 
@@ -452,8 +458,9 @@
 }
 
 .subscribe {
-  position: sticky;
-  top: rem(130);
+  // position: sticky;
+  // top: rem(130);
+  margin-bottom: rem(30);
   &Title {
     @include flc;
     margin-bottom: rem(15);
@@ -494,3 +501,8 @@
   }
 }
 
+.modalSwipe {
+  @include mmin($laptop) {
+    display: none!important;
+  }
+}

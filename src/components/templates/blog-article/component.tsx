@@ -37,35 +37,12 @@ import {
   scroller,
 } from 'react-scroll';
 
-import ModalAlert from '../../organisms/modal-alert/component';
 import ModalSwipe from '../../organisms/modal-swipe/component';
 import ModalSwipeBlock from '../../molecules/modal-swipe-block/component';
 
 const BlogArticle: FC = () => (
   <>
-    <ModalAlert
-      img="img/modal-alert/1.png"
-      button="Lets go"
-      text="Watch authentication calculator"
-    />
-
-    <ModalAlert
-      img="img/modal-alert/2.png"
-      button="Lets go"
-      text="Watch authentication calculator"
-      light
-    />
-
-    <ModalAlert button="Lets go" text="Watch authentication calculator" />
-
-    <ModalAlert
-      img="img/modal-alert/3.png"
-      button="Lets go"
-      text="Watch authentication calculator"
-      light
-    />
-
-    <ModalSwipe>
+    <ModalSwipe className={styled.modalSwipe}>
       <ModalSwipeBlock />
     </ModalSwipe>
 
@@ -916,6 +893,21 @@ const BlogArticle: FC = () => (
                 placeholder="Yourname111@gmail.com"
               />
               <Button className={styled.subscribeButton}>Subscribe</Button>
+            </BlockPrimary>
+            <BlockPrimary className={`${styled.headerPrimary} ${styled.headerPrimaryAside}`} beforeLine>
+              <h3>Want to check if a watch is real</h3>
+              <div className={styled.headerPrimaryUl}>
+                <UlCheck>
+                  <UlCheckLi>
+                    Zero risk purchase - сheck a watch before you buy it
+                  </UlCheckLi>
+                  <UlCheckLi>
+                    Authentication by brand-certified watchmakers
+                  </UlCheckLi>
+                </UlCheck>
+              </div>
+              <Button className={styled.headerPrimaryBtn}>Check a watch</Button>
+              <Trustpilot />
             </BlockPrimary>
           </aside>
         </section>
