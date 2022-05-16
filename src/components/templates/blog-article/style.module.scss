@@ -205,6 +205,9 @@
       position: sticky;
       top: rem(100);
       height: auto;
+      @include mmin ($laptop) {
+        top: rem(130);
+      }
     }
   }
 }
