@@ -6,16 +6,6 @@
   display: flex;
   flex-direction: column;
 
-  &::before {
-    content: '';
-    display: block;
-    width: 100%;
-    padding-top: rem(60);
-    @include mmin($xl) {
-      padding-top: rem(100);
-    }
-  }
-
   & a {
     color: #3760ef;
     text-decoration: none;
@@ -108,16 +98,6 @@
     @include mmin($xl) {
       font-size: rem(18);
     }
-  }
-}
-
-.scrollLine {
-  width: 100%;
-  position: fixed;
-  z-index: 99;
-  top: rem(60);
-  @include mmin($xl) {
-    top: rem(100);
   }
 }
 
@@ -356,12 +336,19 @@
     width: rem(200);
     position: absolute;
     left: rem(-70);
+    height: 100%;
+    padding-bottom: rem(100);
   }
 
   & > ul {
     padding: 0;
     margin: 0;
     border-left: rem(1) solid #f8f9ff;
+    position: sticky;
+    top: rem(100);
+    @include mmin ($xl) {
+      top: rem(130);
+    }
     & > li {
       list-style-type: none;
       margin-bottom: rem(20);

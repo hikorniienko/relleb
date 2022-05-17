@@ -5,7 +5,7 @@ import Footer from '../templates/footer/component';
 
 const BlogArticlePage: FC = () => (
   <>
-    <Header />
+    <Header line />
     <BlogArticle />
     <Footer />
   </>

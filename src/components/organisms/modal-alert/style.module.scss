@@ -11,7 +11,7 @@
   overflow: hidden;
   pointer-events: none;
   transform: translateY(-100%);
-  transition: 0.3s ease;
+  // transition: 0.3s linear;
   @include flc;
   background: linear-gradient(270deg, #6da9ef 66.67%, #3760ef 95.83%);
   @include mmin($laptop) {

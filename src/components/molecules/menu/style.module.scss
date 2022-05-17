@@ -9,6 +9,8 @@
   position: relative;
   z-index: 102;
   padding: rem(10) rem(10) rem(10) 0;
+  height: rem(60);
+  @include flc;
 
   @include mmin($xl) {
     display: none;
@@ -20,6 +22,8 @@
 }
 
 .menuActive {
+  position: absolute;
+  top: 0;
   & > svg:first-child {
     display: none;
   }

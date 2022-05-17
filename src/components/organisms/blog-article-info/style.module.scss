@@ -5,6 +5,7 @@
   background: #3760ef;
   border-radius: rem(10);
   padding: rem(50) rem(15);
+  position: relative;
   @include mmin($laptop) {
     padding: rem(50);
     @include dflex(center, nowrap, space-between);

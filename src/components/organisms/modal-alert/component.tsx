@@ -4,8 +4,20 @@ import styled from './style.module.scss';
 import Button from '../../atoms/buttons/component';
 import Picture from '../../atoms/picture/component';
 
-const ModalAlert: FC<IM> = ({ light, img, button, text, className }) => {
+const ModalAlert: FC<IM> = ({
+  light,
+  img,
+  button,
+  text,
+  className,
+  callback,
+}) => {
   const [active, setActive] = useState(true);
+
+  useEffect(() => {
+    if (callback !== undefined) callback();
+  }, [active]);
+
   return (
     <div
       className={`${styled.modal} ${active && styled.active} ${
@@ -54,12 +66,14 @@ interface IM {
   button: string;
   text: string;
   light?: boolean;
+  callback?: () => void;
 }
 
 ModalAlert.defaultProps = {
   className: '',
   img: '',
   light: false,
+  callback: undefined,
 };
 
 export default ModalAlert;
